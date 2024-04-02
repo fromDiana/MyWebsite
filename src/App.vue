@@ -1,5 +1,6 @@
 <template>
   <div class="the-only-one">Dianka was here.</div>
+  <RouterView />
 </template>
 
 <script>

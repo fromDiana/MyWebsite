@@ -6,7 +6,7 @@
 import ImageIntroduction from '@/components/ImageIntroduction.vue'
 
 export default {
-  name: 'HomePage',
+  name: 'MainPage',
     components: {
         ImageIntroduction
     }

@@ -1,5 +1,16 @@
-<template>home page</template>
+<template>
+    <ImageIntroduction />
+</template>
 
-<script></script>
+<script>
+import ImageIntroduction from '@/components/ImageIntroduction.vue'
+
+export default {
+  name: 'HomePage',
+    components: {
+        ImageIntroduction
+    }
+}
+</script>
 
 <style></style>

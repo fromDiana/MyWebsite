@@ -6,7 +6,7 @@
                 I’m a student, <br/>
                 web & game developer, <br/>
                 teacher.
-                <a style="font-size: 16px; font-weight: normal; width: fit-content" href="#profile-intro">find out more </a>
+                <a style="font-size: 16px; font-weight: normal; width: fit-content" href="#profile-intro">Find out more</a>
             </div>
             <img src="@/assets/theme/pink_girl_circle_white.png">
         </div>
@@ -47,7 +47,7 @@ export default {
      3px  3px 0 #000; /* Outline effect */
     font-size: 4rem;
     font-weight: 700;
-
+    text-align: left;
 }
 img {
     width: 30rem;

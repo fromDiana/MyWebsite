@@ -1,17 +1,15 @@
 <template>
     <ImageIntroduction />
-    <div class="profile-intro" id="profile-intro">
+    <div class="profile-intro page-wrapper" id="profile-intro">
         <h1>Hi, I'm Diana.</h1>
         <ul class="bullet-point-list">
-            <li>Web Development enthusiast and WordPress manager</li>
-            <li>University instructor for Database Systems</li>
-            <li>Leader of a Python club for young students</li>
-            <li>Private tutor in mathematics and informatics</li>
+            <li>I study informatics at <a href="fei.tuke.sk" target="_blank">FEI TUKE</a> 🎓</li>
+            <li>My passion is creating websites in vue.js 💻 and games in Unity 🎮.</li>
+            <li>Since I did well in my studies 📚, I managed to get to teaching and tutoring.</li>
+            <li>I have knowledge also in C, Python, PostgreSQL.</li>
+            <li>Outside of programming I go gym 💪, hiking 🏞️ or do some photo editing / drawing 📷.</li>
         </ul>
-        <p>Check out my tutoring profile <a
-                href="https://www.doucma.sk/309249-doucovanie-doucovanie-informatiky-od-vysokoskolacky-vyvojarky-hier-a-ucitelky"
-                target="_blank">here</a>.</p>
-        <p>"Time always finds its way - no excuses."</p>
+        <p></p>
     </div>
     <WorkExperience id="work-experience" />
     <MyPortfolio id="portfolio" />
@@ -35,7 +33,6 @@ export default {
 
 <style>
 .profile-intro {
-    max-width: 800px;
     margin: 0 auto;
     text-align: left;
     /* padding: 20px; */

@@ -13,6 +13,9 @@
             <a href="https://github.com/diana2482" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github-square"></i>
             </a>
+            <!-- <a href="mailto:orsolyovadianka@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-google"></i>
+            </a> -->
         </div>
     </footer>
 </template>

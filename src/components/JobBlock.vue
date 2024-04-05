@@ -39,11 +39,12 @@ export default {
 .job-title {
     font-size: 1.2em;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .job-duration {
     font-size: 0.9em;
-    color: #6f6f6f;
+    color: #858585;
 }
 .job-description {
     margin: 10px 0;

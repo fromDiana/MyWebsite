@@ -25,8 +25,8 @@
             <div class="jobs">
 
                 <JobBlock title="Unity Game Developer" duration="2023 - March 2024"
-                    description="At a slovak gaming studio I contributed to development of an unfinished aRPG game
-            <a href='https://store.steampowered.com/app/404590/Vikings__Wolves_of_Midgard/' target=_blank>Vikings 2</a>
+                    description="At a slovak gaming studio I contributed to development of an unfinished aRPG game which is a sequel to
+            <a href='https://store.steampowered.com/app/404590/Vikings__Wolves_of_Midgard/' target=_blank>Vikings</a>
             and an upcoming survival game
             <a href='https://store.steampowered.com/app/2820820/Jtunnslayer_Hordes_of_Hel/' target=_blank>Jöttunslayer</a>." link="https://www.games-farm.sk" linkText="games-farm.sk"
                     :skills="['C#', 'Unity']" />

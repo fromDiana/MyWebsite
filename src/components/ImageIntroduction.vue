@@ -6,7 +6,7 @@
                 I’m a student, <br/>
                 web & game developer, <br/>
                 teacher.
-                <a style="font-size: 16px; font-weight: normal;" href="#profile-intro">find out more </a>
+                <a style="font-size: 16px; font-weight: normal; width: fit-content" href="#profile-intro">find out more </a>
             </div>
             <img src="@/assets/theme/pink_girl_circle_white.png">
         </div>
@@ -33,7 +33,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5rem;
 }
 .text{
     display: flex;

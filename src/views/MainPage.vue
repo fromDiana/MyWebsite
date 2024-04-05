@@ -13,19 +13,22 @@
                 target="_blank">here</a>.</p>
         <p>"Time always finds its way - no excuses."</p>
     </div>
-    <ExperienceGraph />
+    <ExperienceGraph id="work-experience" />
+    <MyPortfolio id="portfolio" />
     
 </template>
 
 <script>
 import ImageIntroduction from '@/components/ImageIntroduction.vue';
 import ExperienceGraph from '@/components/ExperienceGraph.vue';
+import MyPortfolio from '@/components/MyPortfolio.vue';
 
 export default {
     name: 'MainPage',
     components: {
         ImageIntroduction,
-        ExperienceGraph
+        ExperienceGraph,
+        MyPortfolio
     }
 }
 </script>

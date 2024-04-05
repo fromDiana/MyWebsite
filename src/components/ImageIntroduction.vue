@@ -1,12 +1,13 @@
 <template>
      <div class="background">
         <div class="main-section">
-            <p class="text">
-                Hi, I’m Diana. <br>
-                I’m a student, <br>
-                web & game developer, <br>
+            <div class="text">
+                Hi, I’m Diana. <br/>
+                I’m a student, <br/>
+                web & game developer, <br/>
                 teacher.
-            </p>
+                <a style="font-size: 16px; font-weight: normal;" href="#profile-intro">find out more </a>
+            </div>
             <img src="@/assets/theme/pink_girl_circle_white.png">
         </div>
      </div>
@@ -23,14 +24,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('@/assets/theme/introduction_background.png') rgba(0, 0, 0, 0.468) 50% / cover no-repeat;
+    background: url('@/assets/theme/introduction_background.png') rgba(0, 0, 0, 0.345) 50% / cover no-repeat;
     background-blend-mode: multiply, color-dodge;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 .main-section {
     display: flex;
-    padding: 15.5625rem 0.625rem;
     justify-content: center;
     align-items: center;
     gap: 3rem;

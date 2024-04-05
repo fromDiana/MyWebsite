@@ -1,10 +1,16 @@
 <template>
   <RouterView />
+  <FooterComponent />
 </template>
 
 <script>
+import FooterComponent from './components/FooterComponent.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    FooterComponent
+  }
 }
 </script>
 
@@ -15,7 +21,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: white;
-  background-color: #181818;
+  background-color: #14161e;
 }
 
 html, body {
@@ -23,12 +29,12 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   width: 100%;
-  height: 100%;  /* comment out to see the footer */
   display:flex;
   flex-direction: column;
   justify-content: center;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .page-wrapper {
@@ -36,6 +42,15 @@ html, body {
   margin: 0 auto;
 }
 
+a {
+    color: #c485ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00ffff;
+}
 ::-webkit-scrollbar {
     display: none;
 }

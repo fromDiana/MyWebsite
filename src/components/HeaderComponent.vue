@@ -67,7 +67,6 @@ header.hidden {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
 }
 
 nav li {
@@ -75,14 +74,21 @@ nav li {
     padding: 0 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+    nav {
+        margin: 0;
+    }
+    header {
+        padding: 20px;
+    }
     nav ul {
         display: block;
-        text-align: center;
+        padding-left: 0;
     }
 
     nav li {
         display: inline-block;
+        padding: 0 10px;
     }
 }
 </style>

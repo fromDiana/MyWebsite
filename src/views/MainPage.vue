@@ -13,21 +13,21 @@
                 target="_blank">here</a>.</p>
         <p>"Time always finds its way - no excuses."</p>
     </div>
-    <ExperienceGraph id="work-experience" />
+    <WorkExperience id="work-experience" />
     <MyPortfolio id="portfolio" />
     
 </template>
 
 <script>
 import ImageIntroduction from '@/components/ImageIntroduction.vue';
-import ExperienceGraph from '@/components/ExperienceGraph.vue';
+import WorkExperience from '@/components/WorkExperience.vue';
 import MyPortfolio from '@/components/MyPortfolio.vue';
 
 export default {
     name: 'MainPage',
     components: {
         ImageIntroduction,
-        ExperienceGraph,
+        WorkExperience,
         MyPortfolio
     }
 }
@@ -37,6 +37,7 @@ export default {
 .profile-intro {
     max-width: 800px;
     margin: 0 auto;
+    text-align: left;
     /* padding: 20px; */
 }
 

@@ -47,6 +47,8 @@ export default {
 }
 .job-description {
     margin: 10px 0;
+    font-size: 1.05em;
+    line-height: 1.4em;
 }
 .skills-list {
   list-style: none;
@@ -65,5 +67,18 @@ export default {
   padding: 5px 15px;
   border-radius: 15px;
   font-size: 0.8em;
+}
+
+@media(max-width: 500px) {
+    .job-block {
+        width: auto;
+        margin: 5px 20px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .job-description {
+        font-size: 1em;
+    }
 }
 </style>

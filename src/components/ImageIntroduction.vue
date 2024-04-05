@@ -54,4 +54,17 @@ img {
     height: 30rem;
     background-size: cover;
 }
+
+@media(max-width: 500px){
+    .main-section {
+        flex-direction: column-reverse;
+    }
+    img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .text {
+        font-size: 1.8rem;
+    }
+}
 </style>

@@ -67,4 +67,14 @@ img {
         font-size: 1.8rem;
     }
 }
+
+@media(max-width: 1300px) and (min-width: 500px){
+    .text {
+        font-size: 3rem;
+    }
+    img {
+        width: 20rem;
+        height: 20rem;
+    }
+}
 </style>

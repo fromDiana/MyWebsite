@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <h3 style="margin-top: 5rem;max-width: 700px; text-align: justify">Visual programming has been around for a long time and is a powerful tool for educational purposes.
+        <h3 style="margin-top: 5rem;max-width: 700px; text-align: justify">
+Visual programming has been around for a long time and is a powerful tool for educational purposes.
 It offers an intuitive and engaging way to learn programming. This thesis focuses on the core challenges beginners face
 when learning programming and how visual programming can help with helping them understand basic principles.
 To understand the problem, we first analyze the current state of educational applications and identify
@@ -90,15 +91,14 @@ export default {
                         'Content-Type': 'application/json'
                     }
                 });
-
                 this.rawData = response.data.body;
                 this.structureData();
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Errorrrr fetching data:', error);
             }
         },
         structureData() {
-            // Initialize structured data
+            // Initialize
             const chapters = Array.from({ length: 5 }, (_, i) => ({
                 chapterNumber: i, // Start from 0
                 levels: Array.from({ length: 10 }, (_, j) => ({
@@ -113,22 +113,21 @@ export default {
             }));
             console.log(chapters);
 
-            // Process raw data to fill structured data
             this.rawData.forEach(item => {
+                if (item.completion_time === null || item.attempts === null || item.chapter === null || item.level === null) return;
+                if (item.completion_time < 0 || item.attempts < 0 || item.chapter < 0 || item.level < 0) return;
+
                 const chapter = chapters[item.chapter];
                 const level = chapter.levels[item.level];
 
-                // Update best completion time
                 if (level.bestCompletionTime === null || item.completion_time < level.bestCompletionTime) {
                     level.bestCompletionTime = item.completion_time;
                 }
 
-                // Update best attempts
                 if (level.bestAttempts === null || item.attempts < level.bestAttempts) {
                     level.bestAttempts = item.attempts;
                 }
 
-                // Add completion time and attempts to arrays
                 if (item.completion_time !== null) {
                     level.completionTimes.push(item.completion_time);
                 }
@@ -137,7 +136,7 @@ export default {
                 }
             });
 
-            // Calculate averages
+            // averages
             chapters.forEach(chapter => {
                 chapter.levels.forEach(level => {
                     if (level.completionTimes.length > 0) {

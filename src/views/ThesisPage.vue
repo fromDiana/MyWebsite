@@ -1,5 +1,13 @@
 <template>
     <div class="container">
+        <h3 style="margin-top: 5rem;max-width: 700px; text-align: justify">Visual programming has been around for a long time and is a powerful tool for educational purposes.
+It offers an intuitive and engaging way to learn programming. This thesis focuses on the core challenges beginners face
+when learning programming and how visual programming can help with helping them understand basic principles.
+To understand the problem, we first analyze the current state of educational applications and identify
+the most common mistakes by working with the target group. Based on the findings, we propose a solution that tries to minimize these mistakes.
+Implementation of the application is followed by a detailed analysis of the use cases.
+In the end, we evaluate the application with the target group and summarize the results.<br>
+Here is the data we collected:</h3>
         <h1>Task Completion Data</h1>
         <div v-for="chapter in structuredData" :key="chapter.chapterNumber" class="chapter-table">
             <h2>Chapter {{ chapter.chapterNumber }}</h2>

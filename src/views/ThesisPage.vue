@@ -107,14 +107,26 @@ export default {
                     totalCompletionTime: 0,
                     attemptCount: 0,
                     bestAttempts: null,
-                    completionTimes: [], // To store all completion times for average calculation
-                    attempts: [] // To store all attempts for average calculation
+                    completionTimes: [],
+                    attempts: []
                 }))
             }));
             console.log(chapters);
 
             this.rawData.forEach(item => {
                 if (item.completion_time === null || item.attempts === null || item.chapter === null || item.level === null) return;
+
+                let completionTime = 0;
+                if (typeof item.completion_time === 'string') {
+                    const comma = item.completion_time.indexOf(',');
+                    const wholePart = item.completion_time.slice(0, comma);
+                    const decimalPart = item.completion_time.slice(comma + 1);
+                    completionTime = parseFloat(wholePart + '.' + decimalPart);
+                } else {
+                    completionTime = item.completion_time;
+                }
+                item.completion_time = completionTime;
+
                 if (item.completion_time < 0 || item.attempts < 0 || item.chapter < 0 || item.level < 0) return;
 
                 const chapter = chapters[item.chapter];

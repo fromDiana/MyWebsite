@@ -3,6 +3,7 @@
         <a href="/"><img src="@/assets/theme/pink_girl_circle_white.png" alt="Logo" class="logo" /></a>
         <nav>
             <ul>
+                <li><router-link to="/links">Links</router-link></li>
                 <li><a href="/#profile-intro">Intro</a></li>
                 <li><a href="/#work-experience">Work Exp</a></li>
                 <li><a href="/#portfolio">Portfolio</a></li>

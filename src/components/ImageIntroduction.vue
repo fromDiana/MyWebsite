@@ -8,7 +8,7 @@
                 teacher.
                 <a style="font-size: 16px; font-weight: normal; width: fit-content" href="#profile-intro">Find out more</a>
             </div>
-            <img src="@/assets/theme/pink_girl_circle_white.png">
+            <img src="assets/theme/pink_girl_circle_white.png">
         </div>
      </div>
 </template>

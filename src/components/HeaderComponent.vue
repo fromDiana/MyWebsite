@@ -1,6 +1,6 @@
 <template>
     <header :class="{ hidden: isHidden }">
-        <a href="/"><img src="@/assets/theme/pink_girl_circle_white.png" alt="Logo" class="logo" /></a>
+        <a href="/"><img src="assets/theme/pink_girl_circle_white.png" alt="Logo" class="logo" /></a>
         <nav>
             <ul>
                 <li><router-link to="/links">Links</router-link></li>

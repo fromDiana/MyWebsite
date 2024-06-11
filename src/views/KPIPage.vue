@@ -20,7 +20,7 @@
 
           <div class="select-box" @click="toggleDropdown">
             <span>{{ selectedOptionsText }}</span>
-            <img src="../assets/dropdown_arrow.png" style="max-width: 15px" />
+            <img src="assets/dropdown_arrow.png" style="max-width: 15px" />
           </div>
 
           <div v-if="isDropdownVisible" class="dropdown-content">
@@ -131,7 +131,7 @@
         <SubjectInfo ref="subjectInfoComponent" :source="currentSubject" :zapocetColor="categoryColors[currentCategory]"
           :textColorInZapocet="calculateTextColor(categoryColors[currentCategory])" />
 
-        <div class="close-popup" @click="closeSubjectPopup"><img src="../assets/close.png" alt="Close"></div>
+        <div class="close-popup" @click="closeSubjectPopup"><img src="assets/close.png" alt="Close"></div>
       </div>
     </transition>
   </div>

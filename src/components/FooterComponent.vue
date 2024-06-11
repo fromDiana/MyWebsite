@@ -4,7 +4,7 @@
             <a href="https://www.instagram.com/fromdiana_/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/@fromDiana" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/channel/UCcX7sWdUtMZoxHnRhhfaB8g?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-youtube"></i>
             </a>
             <a href="https://www.tiktok.com/@fromdiana_" target="_blank" rel="noopener noreferrer">

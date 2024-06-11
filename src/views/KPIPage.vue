@@ -1296,6 +1296,7 @@ a {
   border-radius: 5px 5px 0px 0px;
   cursor: pointer;
   font-family: 'Inter', sans-serif !important;
+  font-size: 1rem;
 }
  
 .second-toggle-button {
@@ -1307,6 +1308,7 @@ a {
   cursor: pointer;
   border-radius: 0px 0px 5px 5px;
   font-family: 'Inter', sans-serif !important;
+  font-size: 1rem;
 }
 
 .active-button {

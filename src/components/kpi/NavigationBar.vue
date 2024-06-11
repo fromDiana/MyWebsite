@@ -11,18 +11,18 @@
       </div>
 
       
-      <div class="input-field" v-if="showInputField">
+      <!-- <div class="input-field" v-if="showInputField">
         <v-icon class="icon" icon="mdi-magnify" @click="showInputOnMobile" v-if="isMobile"></v-icon>
         <v-text-field class="search-bar" density="compact" label="Hľadaj predmet" append-inner-icon="mdi-magnify"
           single-line hide-details persistent-clear variant="outlined" @click:append-inner="onClick"></v-text-field>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- <hr class="navbar-horizontal-line" /> -->
-  <div class="input-field-mobile" v-if="showMobileInput">
+  <!-- <div class="input-field-mobile" v-if="showMobileInput">
     <v-text-field :loading="loading" density="compact" variant="filled" label="Hľadaj predmet" single-line hide-details
       @click:append-inner="onClick"></v-text-field>
-  </div>
+  </div> -->
 </template>
 
 <script>

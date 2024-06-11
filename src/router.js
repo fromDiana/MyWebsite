@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import MainPage from "@/views/MainPage.vue";
 import ThesisPage from "./views/ThesisPage.vue";
 import LinksPage from "./views/LinksPage.vue";
+import KPIPage from "./views/KPIPage.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/links",
     name: "LinksPage",
     component: LinksPage,
+  },
+  {
+    path: "/kpi",
+    name: "KPIPage",
+    component: KPIPage,
   }
 ];
 

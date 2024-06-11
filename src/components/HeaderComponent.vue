@@ -4,9 +4,10 @@
         <nav>
             <ul>
                 <li><router-link to="/links">Links</router-link></li>
-                <li><a href="/#profile-intro">Intro</a></li>
+                <li><a href="/">Home</a></li>
+                <!-- <li><a href="/#profile-intro">Intro</a></li>
                 <li><a href="/#work-experience">Work Exp</a></li>
-                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li> -->
             </ul>
         </nav>
     </header>

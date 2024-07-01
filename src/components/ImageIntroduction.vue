@@ -24,7 +24,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('@/assets/theme/introduction_background.png') rgba(0, 0, 0, 0.345) 50% / cover no-repeat;
+    background: url('@/assets/theme/synth_cubes-min.png') rgba(0, 0, 0, 0.345) 50% / cover no-repeat;
     background-blend-mode: multiply, color-dodge;
     width: 100vw;
     height: 100vh;

@@ -16,6 +16,9 @@
             <a href="https://github.com/fromDiana" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github-square"></i>
             </a>
+            <a href="https://www.patreon.com/fromDiana" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-patreon"></i>
+            </a>
         </div>
     </footer>
 </template>

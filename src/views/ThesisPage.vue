@@ -10,6 +10,7 @@ Implementation of the application is followed by a detailed analysis of the use 
 In the end, we evaluate the application with the target group and summarize the results.<br>
 Here is the data we collected:</h3>
         <h1>Task Completion Data</h1>
+<!-- 
         <div v-for="chapter in structuredData" :key="chapter.chapterNumber" class="chapter-table">
             <h2>Chapter {{ chapter.chapterNumber }}</h2>
             <table>
@@ -68,11 +69,12 @@ Here is the data we collected:</h3>
                 <p><strong>Level:</strong> {{ item.level }}</p>
             </div>
         </div>
+         -->
     </div>
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 
 export default {
     name: 'ThesisPage',
@@ -81,95 +83,95 @@ export default {
             rawData: [],
             structuredData: []
         };
-    },
-    methods: {
-        async fetchData() {
-            try {
-                const response = await axios.get('https://j7u2o5xs0h.execute-api.eu-west-3.amazonaws.com/prod', {
-                    headers: {
-                        'x-api-key': '2vMOtvYfZK7gjaAjdrjsg5GbHQefP1um9U0Eqaw0',
-                        'Content-Type': 'application/json'
-                    }
-                });
-                this.rawData = response.data.body;
-                this.structureData();
-            } catch (error) {
-                console.error('Errorrrr fetching data:', error);
-            }
-        },
-        structureData() {
-            // Initialize
-            const chapters = Array.from({ length: 5 }, (_, i) => ({
-                chapterNumber: i, // Start from 0
-                levels: Array.from({ length: 10 }, (_, j) => ({
-                    levelNumber: j, // Start from 0
-                    bestCompletionTime: null,
-                    totalCompletionTime: 0,
-                    attemptCount: 0,
-                    bestAttempts: null,
-                    completionTimes: [],
-                    attempts: []
-                }))
-            }));
-            console.log(chapters);
+    }//,
+    // methods: {
+    //     async fetchData() {
+    //         try {
+    //             const response = await axios.get('https://j7u2o5xs0h.execute-api.eu-west-3.amazonaws.com/prod', {
+    //                 headers: {
+    //                     'x-api-key': '2vMOtvYfZK7gjaAjdrjsg5GbHQefP1um9U0Eqaw0',
+    //                     'Content-Type': 'application/json'
+    //                 }
+    //             });
+    //             this.rawData = response.data.body;
+    //             this.structureData();
+    //         } catch (error) {
+    //             console.error('Errorrrr fetching data:', error);
+    //         }
+    //     },
+    //     structureData() {
+    //         // Initialize
+    //         const chapters = Array.from({ length: 5 }, (_, i) => ({
+    //             chapterNumber: i, // Start from 0
+    //             levels: Array.from({ length: 10 }, (_, j) => ({
+    //                 levelNumber: j, // Start from 0
+    //                 bestCompletionTime: null,
+    //                 totalCompletionTime: 0,
+    //                 attemptCount: 0,
+    //                 bestAttempts: null,
+    //                 completionTimes: [],
+    //                 attempts: []
+    //             }))
+    //         }));
+    //         console.log(chapters);
 
-            this.rawData.forEach(item => {
-                if (item.completion_time === null || item.attempts === null || item.chapter === null || item.level === null) return;
+    //         this.rawData.forEach(item => {
+    //             if (item.completion_time === null || item.attempts === null || item.chapter === null || item.level === null) return;
 
-                let completionTime = 0;
-                if (typeof item.completion_time === 'string') {
-                    const comma = item.completion_time.indexOf(',');
-                    const wholePart = item.completion_time.slice(0, comma);
-                    const decimalPart = item.completion_time.slice(comma + 1);
-                    completionTime = parseFloat(wholePart + '.' + decimalPart);
-                } else {
-                    completionTime = item.completion_time;
-                }
-                item.completion_time = completionTime;
+    //             let completionTime = 0;
+    //             if (typeof item.completion_time === 'string') {
+    //                 const comma = item.completion_time.indexOf(',');
+    //                 const wholePart = item.completion_time.slice(0, comma);
+    //                 const decimalPart = item.completion_time.slice(comma + 1);
+    //                 completionTime = parseFloat(wholePart + '.' + decimalPart);
+    //             } else {
+    //                 completionTime = item.completion_time;
+    //             }
+    //             item.completion_time = completionTime;
 
-                if (item.completion_time < 0 || item.attempts < 0 || item.chapter < 0 || item.level < 0) return;
+    //             if (item.completion_time < 0 || item.attempts < 0 || item.chapter < 0 || item.level < 0) return;
 
-                const chapter = chapters[item.chapter];
-                const level = chapter.levels[item.level];
+    //             const chapter = chapters[item.chapter];
+    //             const level = chapter.levels[item.level];
 
-                if (level.bestCompletionTime === null || item.completion_time < level.bestCompletionTime) {
-                    level.bestCompletionTime = item.completion_time;
-                }
+    //             if (level.bestCompletionTime === null || item.completion_time < level.bestCompletionTime) {
+    //                 level.bestCompletionTime = item.completion_time;
+    //             }
 
-                if (level.bestAttempts === null || item.attempts < level.bestAttempts) {
-                    level.bestAttempts = item.attempts;
-                }
+    //             if (level.bestAttempts === null || item.attempts < level.bestAttempts) {
+    //                 level.bestAttempts = item.attempts;
+    //             }
 
-                if (item.completion_time !== null) {
-                    level.completionTimes.push(item.completion_time);
-                }
-                if (item.attempts !== null) {
-                    level.attempts.push(item.attempts);
-                }
-            });
+    //             if (item.completion_time !== null) {
+    //                 level.completionTimes.push(item.completion_time);
+    //             }
+    //             if (item.attempts !== null) {
+    //                 level.attempts.push(item.attempts);
+    //             }
+    //         });
 
-            // averages
-            chapters.forEach(chapter => {
-                chapter.levels.forEach(level => {
-                    if (level.completionTimes.length > 0) {
-                        level.averageCompletionTime = (level.completionTimes.reduce((a, b) => a + b, 0) / level.completionTimes.length).toFixed(2);
-                    } else {
-                        level.averageCompletionTime = null;
-                    }
-                    if (level.attempts.length > 0) {
-                        level.averageAttempts = (level.attempts.reduce((a, b) => a + b, 0) / level.attempts.length).toFixed(2);
-                    } else {
-                        level.averageAttempts = null;
-                    }
-                });
-            });
+    //         // averages
+    //         chapters.forEach(chapter => {
+    //             chapter.levels.forEach(level => {
+    //                 if (level.completionTimes.length > 0) {
+    //                     level.averageCompletionTime = (level.completionTimes.reduce((a, b) => a + b, 0) / level.completionTimes.length).toFixed(2);
+    //                 } else {
+    //                     level.averageCompletionTime = null;
+    //                 }
+    //                 if (level.attempts.length > 0) {
+    //                     level.averageAttempts = (level.attempts.reduce((a, b) => a + b, 0) / level.attempts.length).toFixed(2);
+    //                 } else {
+    //                     level.averageAttempts = null;
+    //                 }
+    //             });
+    //         });
 
-            this.structuredData = chapters;
-        }
-    },
-    mounted() {
-        this.fetchData();
-    }
+    //         this.structuredData = chapters;
+    //     }
+    // },
+    // mounted() {
+    //     this.fetchData();
+    // }
 }
 </script>
 

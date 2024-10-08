@@ -3,7 +3,7 @@
         <div class="main-section">
             <div class="text">
                 Hi, I’m Diana. <br/>
-                I’m a student, <br/>
+                I’m a CS bachelor, <br/>
                 web & game developer, <br/>
                 teacher.
                 <a style="font-size: 16px; font-weight: normal; width: fit-content" href="#profile-intro">Find out more</a>
